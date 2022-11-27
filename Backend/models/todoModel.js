@@ -5,5 +5,4 @@ const TodoSchema = new mongoose.Schema({
     tasks: [String]
 })
 
-const TodoModel = mongoose.model("Todo",TodoSchema)
-export default TodoModel;
+module.exports = mongoose.model("Todo",TodoSchema)
