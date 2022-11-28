@@ -6,8 +6,8 @@ exports.home = (req, res) => {
 
 exports.createToDo = async (req,res) => {
     try{
-        title = "Tommorow"
-        tasks = ["two","three"]
+      
+        const { title, tasks } = req.body;
         const todo = await Todo.create({ title, tasks });
         res.status(201).json({
             success: true,
